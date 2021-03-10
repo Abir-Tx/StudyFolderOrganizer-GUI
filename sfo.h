@@ -21,6 +21,8 @@ class sfo : public QMainWindow {
 
     void on_about_clicked();
 
+    void on_create_clicked();
+
   private:
     Ui::sfo *ui;
 };

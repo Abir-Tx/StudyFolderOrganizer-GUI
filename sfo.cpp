@@ -5,11 +5,13 @@
 #include "ui_sfo.h"
 
 #include <QFile>
+#include <QPixmap>
 #include <QTextStream>
 #include <QtDebug>
-
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
     ui->setupUi(this);
+    QPixmap sfologo(":/res/logo/SFO_v2.ico");
+    ui->sfologo->setPixmap(sfologo);
 }
 
 sfo::~sfo() { delete ui; }

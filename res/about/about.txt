@@ -1,0 +1,1 @@
+SFO stands for Study Folder Organizer. Developed & managed by Mushfiqur Rahman Abir.This small tool allows to manage a student's university's digital files in a organized way. This app creates a structured directory to specified drive for managing and keeping files

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource lang="English" prefix="/about">
+        <file>res/about/about.txt</file>
+    </qresource>
+</RCC>

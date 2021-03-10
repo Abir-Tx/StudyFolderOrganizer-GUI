@@ -4,18 +4,24 @@
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class sfo; }
+namespace Ui {
+class sfo;
+}
 QT_END_NAMESPACE
 
-class sfo : public QMainWindow
-{
+class sfo : public QMainWindow {
     Q_OBJECT
 
-public:
+  public:
     sfo(QWidget *parent = nullptr);
     ~sfo();
 
-private:
+  private slots:
+    void on_exit_clicked();
+
+    void on_about_clicked();
+
+  private:
     Ui::sfo *ui;
 };
 #endif // SFO_H

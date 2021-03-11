@@ -12,6 +12,9 @@
 
 // Global Vars
 QString selectedDrive;
+QString year;
+QString semester;
+bool isLabSelected = false;
 
 
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
@@ -69,4 +72,25 @@ void sfo::on_driveslist_currentTextChanged(const QString &selected)
 void sfo::on_next_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+}
+
+void sfo::on_pushButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void sfo::on_next_2_clicked()
+{
+    year = ui->year->text();
+    qDebug()<<"Given Year-> "+year;
+
+    semester = ui->semester->text();
+    qDebug()<<"Given Semester-> "+semester;
+
+    if (ui->labradio->isChecked()){
+        isLabSelected = true;
+    }
+    else{
+        isLabSelected = false;
+    }
 }

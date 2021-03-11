@@ -33,6 +33,8 @@ class sfo : public QMainWindow {
 
     void on_next_2_clicked();
 
+    void on_actionExit_triggered();
+
 private:
     Ui::sfo *ui;
 };

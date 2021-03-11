@@ -94,3 +94,8 @@ void sfo::on_next_2_clicked()
         isLabSelected = false;
     }
 }
+
+void sfo::on_actionExit_triggered()
+{
+    QApplication::exit();
+}

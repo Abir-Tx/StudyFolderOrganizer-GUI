@@ -23,7 +23,15 @@ class sfo : public QMainWindow {
 
     void on_create_clicked();
 
-  private:
+    void on_pushButton_clicked();
+
+    void on_back_clicked();
+
+    void on_driveslist_currentTextChanged(const QString &arg1);
+
+    void on_next_clicked();
+
+private:
     Ui::sfo *ui;
 };
 #endif // SFO_H

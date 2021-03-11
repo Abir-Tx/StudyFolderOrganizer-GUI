@@ -13,6 +13,7 @@ SOURCES += \
     sfo.cpp
 
 HEADERS += \
+    appinfo.h \
     sfo.h
 
 FORMS += \

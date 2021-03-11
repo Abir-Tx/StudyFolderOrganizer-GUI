@@ -17,6 +17,7 @@ QString semester;
 bool isLabSelected = false;
 
 
+
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
     ui->setupUi(this);
     QPixmap sfologo(":/res/logo/SFO_v2.ico");
@@ -43,7 +44,7 @@ void sfo::on_exit_clicked() {
     }
 }
 
-void sfo::on_about_clicked() {
+void sfo::about(){
     QFile about(":/about/res/about/about.txt");
 
     if (!about.open(QFile::ReadOnly | QFile::Text)) {
@@ -53,6 +54,10 @@ void sfo::on_about_clicked() {
     QTextStream readAbout(&about);
     QString aboutText = readAbout.readAll();
     QMessageBox::about(this, "About SFO", aboutText);
+}
+
+void sfo::on_about_clicked() {
+    about();
 }
 
 void sfo::on_create_clicked()
@@ -83,7 +88,7 @@ void sfo::on_pushButton_clicked()
 
 void sfo::on_next_2_clicked()
 {
-
+    ui->stackedWidget->setCurrentIndex(3);
 }
 
 void sfo::on_actionExit_triggered()
@@ -118,9 +123,11 @@ void sfo::on_checkBox_stateChanged(int arg1)
 
     if (ui->labradio->isChecked()){
         isLabSelected = true;
+        qDebug()<<"Selected -> Lab";
     }
     else{
         isLabSelected = false;
+//        qDebug()<<"Selected -> None";
     }
 
 
@@ -130,4 +137,14 @@ void sfo::on_checkBox_stateChanged(int arg1)
     else if (arg1==2 && isLabSelected && isInfoGiven){
         ui->next_2->setDisabled(false);
     }
+}
+
+void sfo::on_actionHome_triggered()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void sfo::on_actionAbout_SFO_triggered()
+{
+    about();
 }

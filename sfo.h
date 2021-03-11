@@ -14,6 +14,7 @@ class sfo : public QMainWindow {
 
   public:
     sfo(QWidget *parent = nullptr);
+    void about();
     ~sfo();
 
   private slots:
@@ -38,6 +39,10 @@ class sfo : public QMainWindow {
     void on_back_3_clicked();
 
     void on_checkBox_stateChanged(int arg1);
+
+    void on_actionHome_triggered();
+
+    void on_actionAbout_SFO_triggered();
 
 private:
     Ui::sfo *ui;

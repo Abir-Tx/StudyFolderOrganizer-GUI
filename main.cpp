@@ -1,10 +1,18 @@
 #include <QApplication>
 
 #include "sfo.h"
+#include "appinfo.h"
 
 int main(int argc, char *argv[]) {
-  QApplication a(argc, argv);
-  sfo w;
-  w.show();
-  return a.exec();
+  QApplication app(argc, argv);
+  app.setApplicationName(applicationName);
+  app.setApplicationVersion(applicationVersion);
+
+
+  sfo window;
+  window.setWindowTitle(applicationName);
+  window.setMinimumSize(minAppSize);
+  window.show();
+
+  return app.exec();
 }

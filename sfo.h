@@ -35,6 +35,10 @@ class sfo : public QMainWindow {
 
     void on_actionExit_triggered();
 
+    void on_back_3_clicked();
+
+    void on_checkBox_stateChanged(int arg1);
+
 private:
     Ui::sfo *ui;
 };

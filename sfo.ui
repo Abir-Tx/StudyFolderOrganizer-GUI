@@ -157,6 +157,13 @@
          </layout>
         </item>
         <item>
+         <widget class="QCheckBox" name="checkBox">
+          <property name="text">
+           <string>Confirm</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="next_2">
           <property name="text">
            <string>Next</string>
@@ -171,6 +178,34 @@
          </widget>
         </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="labpanel">
+       <widget class="QPushButton" name="next_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>211</y>
+          <width>594</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="back_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>240</y>
+          <width>594</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Back</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>

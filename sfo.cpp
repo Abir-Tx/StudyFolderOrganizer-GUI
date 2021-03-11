@@ -28,6 +28,8 @@ sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
     foreach (QFileInfo drive, dir.drives()){
             ui->driveslist->addItem(drive.absoluteFilePath());
     }
+
+        ui->next_2->setDisabled(true);
 }
 
 sfo::~sfo() { delete ui; }
@@ -81,11 +83,38 @@ void sfo::on_pushButton_clicked()
 
 void sfo::on_next_2_clicked()
 {
+
+}
+
+void sfo::on_actionExit_triggered()
+{
+    QApplication::exit();
+}
+
+void sfo::on_back_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void sfo::on_checkBox_stateChanged(int arg1)
+{
+    ui->next_2->setDisabled(true);
+    bool isInfoGiven = false;
+
+
     year = ui->year->text();
     qDebug()<<"Given Year-> "+year;
 
     semester = ui->semester->text();
     qDebug()<<"Given Semester-> "+semester;
+
+
+    if(year=="" || semester==""){
+        isInfoGiven=false;
+    }
+    else{
+        isInfoGiven=true;
+    }
 
     if (ui->labradio->isChecked()){
         isLabSelected = true;
@@ -93,9 +122,12 @@ void sfo::on_next_2_clicked()
     else{
         isLabSelected = false;
     }
-}
 
-void sfo::on_actionExit_triggered()
-{
-    QApplication::exit();
+
+    if((arg1==0 || arg1==2) && !isLabSelected && !isInfoGiven){
+        ui->next_2->setDisabled(true);
+    }
+    else if (arg1==2 && isLabSelected && isInfoGiven){
+        ui->next_2->setDisabled(false);
+    }
 }

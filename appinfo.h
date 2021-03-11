@@ -5,6 +5,6 @@
 
 const QString applicationName = "SFO";
 const QString applicationVersion = "v1.0";
-QSize minAppSize(300, 400);
+QSize minAppSize(400, 350);
 
 #endif // APPINFO_H

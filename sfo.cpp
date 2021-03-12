@@ -15,7 +15,7 @@ QString selectedDrive;
 QString year;
 QString semester;
 bool isLabSelected = false;
-
+int labSubNo;
 
 
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
@@ -155,4 +155,18 @@ void sfo::on_actionHome_triggered()
 void sfo::on_actionAbout_SFO_triggered()
 {
     about();
+}
+
+void sfo::on_next_3_clicked()
+{
+    labSubNo = ui->labsubno->currentIndex();
+    labSubNo+=1;
+    qDebug()<<"Selected number of Lab Subjects -> "+QString::number(labSubNo);
+
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+void sfo::on_back_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
 }

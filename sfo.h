@@ -45,6 +45,10 @@ class sfo : public QMainWindow {
 
     void on_actionAbout_SFO_triggered();
 
+    void on_next_3_clicked();
+
+    void on_back_4_clicked();
+
 private:
     Ui::sfo *ui;
 };

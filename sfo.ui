@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="main">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -205,6 +205,28 @@
         <property name="text">
          <string>Back</string>
         </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>234</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="labsubnolabel">
+           <property name="text">
+            <string>How many Lab Subjects you got </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="labsubno"/>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>

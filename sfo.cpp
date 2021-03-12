@@ -30,7 +30,8 @@ sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
             ui->driveslist->addItem(drive.absoluteFilePath());
     }
 
-        ui->next_2->setDisabled(true);
+    listLabSubNo();
+    ui->next_2->setDisabled(true);
 }
 
 sfo::~sfo() { delete ui; }
@@ -54,6 +55,13 @@ void sfo::about(){
     QTextStream readAbout(&about);
     QString aboutText = readAbout.readAll();
     QMessageBox::about(this, "About SFO", aboutText);
+}
+
+void sfo::listLabSubNo(){
+    QDir dir;
+    for (int i = 1; i < 6; i++) {
+        ui->labsubno->addItem(QString::number(i));
+    }
 }
 
 void sfo::on_about_clicked() {

@@ -15,6 +15,7 @@ class sfo : public QMainWindow {
   public:
     sfo(QWidget *parent = nullptr);
     void about();
+    void listLabSubNo();
     ~sfo();
 
   private slots:

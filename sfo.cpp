@@ -255,4 +255,6 @@ void sfo::on_createLabs_clicked()
 
 
   createdir->subFolderCreator(subNameHolder, labSubNo);
+
+  ui->createLabs->setDisabled(true);
 }

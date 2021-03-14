@@ -19,6 +19,7 @@ QString selectedDrive;
 QString year;
 QString semester;
 bool isLabSelected = false;
+bool isTheorySelected = false;
 int labSubNo;
 QVBoxLayout *vlayout = new QVBoxLayout;
 QVector<QLineEdit*> lineEditHolder;
@@ -145,20 +146,34 @@ void sfo::on_checkBox_stateChanged(int arg1)
         isInfoGiven=true;
     }
 
+    // Checking if lab radio button is selected or not
     if (ui->labradio->isChecked()){
         isLabSelected = true;
         qDebug()<<"Selected -> Lab";
     }
+
+    // Checking if theory radio button is selected or not
+    if (ui->theoryradio->isChecked()){
+      isTheorySelected = true;
+      qDebug()<<"Selected -> Theory";
+    }
+
     else{
-        isLabSelected = false;
-//        qDebug()<<"Selected -> None";
+        isTheorySelected = false;
     }
 
 
-    if((arg1==0 || arg1==2) && !isLabSelected && !isInfoGiven){
+    // Checking for if lab is selected or not.
+    // If the lab readio button is not selected then set the
+    // next button to disbaled whether the checkbox is selected
+    // or not selected
+    //
+    // 0 == Unchecked && 1 == Partially Checked && 2 == Checked
+
+    if((arg1==0 || arg1==2) && !isLabSelected && !isInfoGiven && !isTheorySelected){
         ui->next_2->setDisabled(true);
     }
-    else if (arg1==2 && isLabSelected && isInfoGiven){
+    else if (arg1==2 && (isLabSelected || isTheorySelected) && isInfoGiven){
         ui->next_2->setDisabled(false);
     }
 }

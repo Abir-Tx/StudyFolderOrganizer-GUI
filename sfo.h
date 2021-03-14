@@ -16,6 +16,8 @@ class sfo : public QMainWindow {
     sfo(QWidget *parent = nullptr);
     void about();
     void listLabSubNo();
+    void takeLabSubName();
+    void createLineEdits();
     ~sfo();
 
   private slots:
@@ -49,7 +51,9 @@ class sfo : public QMainWindow {
 
     void on_back_4_clicked();
 
-private:
+    void on_next_4_clicked();
+
+   private:
     Ui::sfo *ui;
 };
 #endif // SFO_H

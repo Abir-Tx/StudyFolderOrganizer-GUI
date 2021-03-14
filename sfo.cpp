@@ -9,6 +9,9 @@
 #include <QTextStream>
 #include <QtDebug>
 #include <QDir>
+#include <QLineEdit>
+#include <QVBoxLayout>
+//#include <memory>
 
 // Global Vars
 QString selectedDrive;
@@ -16,6 +19,9 @@ QString year;
 QString semester;
 bool isLabSelected = false;
 int labSubNo;
+QVBoxLayout *vlayout = new QVBoxLayout;
+QVector<QLineEdit*> lineEditHolder;
+QString labSubNameHolder[2];
 
 
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
@@ -32,6 +38,8 @@ sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
 
     listLabSubNo();
     ui->next_2->setDisabled(true);
+
+    ui->labfoldername->setLayout(vlayout);
 }
 
 sfo::~sfo() { delete ui; }
@@ -163,10 +171,37 @@ void sfo::on_next_3_clicked()
     labSubNo+=1;
     qDebug()<<"Selected number of Lab Subjects -> "+QString::number(labSubNo);
 
+    createLineEdits();
     ui->stackedWidget->setCurrentIndex(4);
 }
 
 void sfo::on_back_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
+}
+
+void sfo::createLineEdits(){
+  // Showing the line edits depending on the labsubno count
+  for(int i = 0; i < labSubNo; i++){
+    lineEditHolder.push_back(new QLineEdit());
+  }
+
+
+  for (int i = 0 ; i < lineEditHolder.size(); i++){
+    vlayout->addWidget(lineEditHolder[i]);
+  }
+}
+
+void sfo::takeLabSubName(){
+  // Saving the input from the line edits
+  for (int i = 0 ; i< lineEditHolder.size(); i++){
+    labSubNameHolder[i] = lineEditHolder[i]->text();
+  }
+}
+void sfo::on_next_4_clicked()
+{
+  takeLabSubName();
+  for (int i = 0; i < lineEditHolder.size(); ++i) {
+    qDebug()<<"Lab Sub no: "+QString::number(i+1)+" name is -> "+labSubNameHolder[i];
+  }
 }

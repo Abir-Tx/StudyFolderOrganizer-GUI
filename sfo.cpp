@@ -215,4 +215,23 @@ void sfo::on_next_4_clicked()
   for (int i = 0; i < lineEditHolder.size(); ++i) {
     qDebug()<<"Lab Sub no: "+QString::number(i+1)+" name is -> "+labSubNameHolder[i];
   }
+
+  ui->back_4->hide();
+  ui->next_4->hide();
+  ui->stackedWidget->setCurrentIndex(5);
+}
+
+void sfo::on_back_5_clicked()
+{
+
+  ui->back_4->show();
+  ui->next_4->show();
+  ui->stackedWidget->setCurrentIndex(4);
+}
+
+void sfo::on_createLabs_clicked()
+{
+  QDir makedir("E:/Testme");
+  makedir.mkdir("E:/Testme");
+  qDebug()<<"Created";
 }

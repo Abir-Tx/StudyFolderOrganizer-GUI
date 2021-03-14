@@ -53,6 +53,10 @@ class sfo : public QMainWindow {
 
     void on_next_4_clicked();
 
+    void on_back_5_clicked();
+
+    void on_createLabs_clicked();
+
    private:
     Ui::sfo *ui;
 };

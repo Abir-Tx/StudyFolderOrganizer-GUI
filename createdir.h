@@ -4,8 +4,9 @@
 #include <QString>
 class Createdir{
  public:
-  void rootDirCreator(QString &selectedDrive, QString &year, QString &semester);
-
+  void rootDirCreator(QString &selectedDrive, QString &year,
+                      QString &semester, QString labOrTheory);
+  QString labOrtheory(bool isLabSelected, bool isTheorySelected);
   ~Createdir();
 };
 

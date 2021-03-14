@@ -249,6 +249,8 @@ void sfo::on_createLabs_clicked()
 {
   Createdir *createdir = new Createdir;
 
-  createdir->rootDirCreator(selectedDrive, year, semester);
+  createdir->rootDirCreator(selectedDrive,
+                            year, semester,
+                            createdir->labOrtheory(isLabSelected, isTheorySelected));
 
 }

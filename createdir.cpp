@@ -3,7 +3,8 @@
 #include <QDir>
 #include <QMessageBox>
 
-void Createdir::rootDirCreator(QString &driveLetter, QString &year, QString &semester){
+void Createdir::rootDirCreator(QString &driveLetter, QString &year,
+                               QString &semester, QString labOrTheory){
   // Checking the year
   if (year == "1")
     year+="st";
@@ -24,7 +25,9 @@ void Createdir::rootDirCreator(QString &driveLetter, QString &year, QString &sem
   else
     semester+="th";
 
-  QString rootDir = driveLetter+"University Study/Study Materials/"+year+" Year/"+semester+" Semester/";
+  //Creating the folders
+
+  QString rootDir = driveLetter+"University Study/Study Materials/"+year+" Year/"+semester+" Semester/"+labOrTheory+"/";
   QDir dir(rootDir);
 
   if (dir.exists()){
@@ -35,4 +38,11 @@ void Createdir::rootDirCreator(QString &driveLetter, QString &year, QString &sem
      dir.mkpath(rootDir);
      qDebug()<<"Root Directory created";
   }
+}
+
+
+QString Createdir::labOrtheory(bool isLabSelected, bool isTheorySelected){
+  if (isLabSelected) return "Lab";
+  else if (isTheorySelected) return "Theory";
+  else return 0;
 }

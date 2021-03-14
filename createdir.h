@@ -7,6 +7,7 @@ class Createdir{
   void rootDirCreator(QString &selectedDrive, QString &year,
                       QString &semester, QString labOrTheory);
   QString labOrtheory(bool isLabSelected, bool isTheorySelected);
+  void subFolderCreator(QString *subNameHolder, int labSubNo);
   ~Createdir();
 };
 

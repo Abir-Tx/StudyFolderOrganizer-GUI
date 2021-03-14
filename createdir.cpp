@@ -3,6 +3,11 @@
 #include <QDir>
 #include <QMessageBox>
 
+// Global vars
+QString rootDir;
+QDir dir;
+
+
 void Createdir::rootDirCreator(QString &driveLetter, QString &year,
                                QString &semester, QString labOrTheory){
   // Checking the year
@@ -27,22 +32,44 @@ void Createdir::rootDirCreator(QString &driveLetter, QString &year,
 
   //Creating the folders
 
-  QString rootDir = driveLetter+"University Study/Study Materials/"+year+" Year/"+semester+" Semester/"+labOrTheory+"/";
-  QDir dir(rootDir);
-
+  rootDir = driveLetter+"University Study/Study Materials/"
+                    +year+" Year/"+semester+" Semester/"+labOrTheory
+                    +"/";
+  dir.setPath(rootDir);
+  dir.mkpath(rootDir);
   if (dir.exists()){
-    qDebug()<<"Folder already exixts";
+    qDebug()<<"Root folders created successfully";
   }
   else
   {
-     dir.mkpath(rootDir);
-     qDebug()<<"Root Directory created";
+    qDebug()<<"Could not create root folders";
   }
+//  if (dir.exists()){
+//    qDebug()<<"Folder already exixts";
+//  }
+//  else
+//  {
+//     dir.mkpath(rootDir);
+//     qDebug()<<"Root Directory created";
+//  }
 }
 
-
+// Return Lab or Theory depending on what user has selected
 QString Createdir::labOrtheory(bool isLabSelected, bool isTheorySelected){
   if (isLabSelected) return "Lab";
   else if (isTheorySelected) return "Theory";
   else return 0;
+}
+
+void Createdir::subFolderCreator(QString *subNameHolder, int labSubNo){
+  for (int i= 0; i< labSubNo; i++){
+    dir.mkdir(rootDir+subNameHolder[i]);
+  }
+
+  // Checking if the subject folders have been created or not
+  dir.setPath(rootDir+subNameHolder[0]);
+  if (dir.exists())
+    qDebug()<<"Subject folders created successfully";
+  else
+    qDebug()<<"Could not created subject folders";
 }

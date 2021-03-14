@@ -11,6 +11,7 @@
 #include <QDir>
 #include <QLineEdit>
 #include <QVBoxLayout>
+#include "createdir.h"
 //#include <memory>
 
 // Global Vars
@@ -231,7 +232,8 @@ void sfo::on_back_5_clicked()
 
 void sfo::on_createLabs_clicked()
 {
-  QDir makedir("E:/Testme");
-  makedir.mkdir("E:/Testme");
-  qDebug()<<"Created";
+  Createdir *createdir = new Createdir;
+
+  createdir->rootDirCreator(selectedDrive, year, semester);
+
 }

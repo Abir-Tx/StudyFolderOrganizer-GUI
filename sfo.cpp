@@ -23,7 +23,7 @@ bool isTheorySelected = false;
 int labSubNo;
 QVBoxLayout *vlayout = new QVBoxLayout;
 QVector<QLineEdit*> lineEditHolder;
-QString labSubNameHolder[5];
+QString subNameHolder[5];
 
 
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
@@ -222,14 +222,14 @@ void sfo::createLineEdits(){
 void sfo::takeLabSubName(){
   // Saving the input from the line edits
   for (int i = 0 ; i< lineEditHolder.size(); i++){
-    labSubNameHolder[i] = lineEditHolder[i]->text();
+    subNameHolder[i] = lineEditHolder[i]->text();
   }
 }
 void sfo::on_next_4_clicked()
 {
   takeLabSubName();
   for (int i = 0; i < lineEditHolder.size(); ++i) {
-    qDebug()<<"Lab Sub no: "+QString::number(i+1)+" name is -> "+labSubNameHolder[i];
+    qDebug()<<"Lab Sub no: "+QString::number(i+1)+" name is -> "+subNameHolder[i];
   }
 
   ui->back_4->hide();
@@ -253,4 +253,6 @@ void sfo::on_createLabs_clicked()
                             year, semester,
                             createdir->labOrtheory(isLabSelected, isTheorySelected));
 
+
+  createdir->subFolderCreator(subNameHolder, labSubNo);
 }

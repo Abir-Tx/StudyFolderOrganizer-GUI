@@ -26,10 +26,17 @@ QString labSubNameHolder[2];
 
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
     ui->setupUi(this);
+
+    // Hiding the labsubname page back and next button as they are brute forced in a vert layout
+    ui->back_4->hide();
+    ui->next_4->hide();
+
+    // Setting startup logo image
     QPixmap sfologo(":/res/logo/SFO_v2.ico");
     ui->sfologo->setPixmap(sfologo);
-    ui->stackedWidget->setCurrentIndex(0);
 
+
+    ui->stackedWidget->setCurrentIndex(0);
     // Listing the drive letter in the combobox
     QDir dir;
     foreach (QFileInfo drive, dir.drives()){
@@ -173,10 +180,14 @@ void sfo::on_next_3_clicked()
 
     createLineEdits();
     ui->stackedWidget->setCurrentIndex(4);
+    ui->back_4->show();
+    ui->next_4->show();
 }
 
 void sfo::on_back_4_clicked()
 {
+    ui->back_4->hide();
+    ui->next_4->hide();
     ui->stackedWidget->setCurrentIndex(3);
 }
 

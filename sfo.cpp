@@ -255,6 +255,13 @@ void sfo::on_createLabs_clicked()
 
 
   createdir->subFolderCreator(subNameHolder, labSubNo);
+  if (createdir->isdDirCreationSuccessfull()){
+    ui->createLabs->setDisabled(true);
+    ui->successornot->setText("Successfully created the folders");
+  }
+  else{
+    ui->createLabs->setDisabled(false);
+    ui->successornot->setText("Could not create the folders");
+  }
 
-  ui->createLabs->setDisabled(true);
 }

@@ -73,3 +73,11 @@ void Createdir::subFolderCreator(QString *subNameHolder, int labSubNo){
   else
     qDebug()<<"Could not created subject folders";
 }
+
+bool Createdir::isdDirCreationSuccessfull(){
+  dir.setPath(rootDir);
+  if (dir.exists())
+    return true;
+  else
+    return false;
+}

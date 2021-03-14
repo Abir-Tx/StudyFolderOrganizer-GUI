@@ -213,45 +213,43 @@
       </widget>
       <widget class="QWidget" name="labfoldername"/>
       <widget class="QWidget" name="createlabfolder">
-       <widget class="QPushButton" name="createLabs">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>90</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Create </string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="back_5">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>199</y>
-          <width>634</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="next_5">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>170</y>
-          <width>634</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Next</string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="createinfo">
+          <property name="text">
+           <string>CLick on Create to create the folders</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="createLabs">
+          <property name="text">
+           <string>Create </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="successornot">
+          <property name="text">
+           <string>Status</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="next_5">
+          <property name="text">
+           <string>Next</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="back_5">
+          <property name="text">
+           <string>Back</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>

@@ -8,6 +8,7 @@ class Createdir{
                       QString &semester, QString labOrTheory);
   QString labOrtheory(bool isLabSelected, bool isTheorySelected);
   void subFolderCreator(QString *subNameHolder, int labSubNo);
+  bool isdDirCreationSuccessfull();
   ~Createdir();
 };
 

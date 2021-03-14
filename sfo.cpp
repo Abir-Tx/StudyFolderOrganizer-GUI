@@ -21,7 +21,7 @@ bool isLabSelected = false;
 int labSubNo;
 QVBoxLayout *vlayout = new QVBoxLayout;
 QVector<QLineEdit*> lineEditHolder;
-QString labSubNameHolder[2];
+QString labSubNameHolder[5];
 
 
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {

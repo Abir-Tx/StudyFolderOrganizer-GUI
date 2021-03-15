@@ -113,7 +113,11 @@ void sfo::on_pushButton_clicked()
 
 void sfo::on_next_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(3);
+  if (isLabSelected) ui->labsubnolabel->setText("How many Lab Subjects have you got");
+  else if (isTheorySelected) ui->labsubnolabel->setText("How many Theory Subjects have you got");
+  else ui->labsubnolabel->setText("How many Subjects have you got");
+
+   ui->stackedWidget->setCurrentIndex(3);
 }
 
 void sfo::on_actionExit_triggered()

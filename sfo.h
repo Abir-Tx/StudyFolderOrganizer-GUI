@@ -57,6 +57,8 @@ class sfo : public QMainWindow {
 
     void on_createLabs_clicked();
 
+    void on_actionFeedback_triggered();
+
    private:
     Ui::sfo *ui;
 };

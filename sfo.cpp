@@ -12,6 +12,8 @@
 #include <QLineEdit>
 #include <QVBoxLayout>
 #include "createdir.h"
+#include <QDesktopServices>
+#include <QUrl>
 //#include <memory>
 
 // Global Vars
@@ -269,4 +271,9 @@ void sfo::on_createLabs_clicked()
     ui->successornot->setText("Could not create the folders");
   }
 
+}
+
+void sfo::on_actionFeedback_triggered()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/Abir-Tx/StudyFolderOrganizer-GUI/issues/new/choose", QUrl::TolerantMode));
 }

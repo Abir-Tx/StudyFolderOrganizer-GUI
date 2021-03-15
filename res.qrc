@@ -8,5 +8,6 @@
         <file>res/logo/about.ico</file>
         <file>res/logo/exit.ico</file>
         <file>res/logo/home.ico</file>
+        <file>res/logo/feedback.ico</file>
     </qresource>
 </RCC>

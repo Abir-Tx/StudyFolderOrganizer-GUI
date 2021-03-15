@@ -314,21 +314,35 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/logo/exit.ico</normaloff>:/res/logo/exit.ico</iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>
   </action>
   <action name="actionHome">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/logo/home.ico</normaloff>:/res/logo/home.ico</iconset>
+   </property>
    <property name="text">
     <string>Home</string>
    </property>
   </action>
   <action name="actionAbout_SFO">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/logo/about.ico</normaloff>:/res/logo/about.ico</iconset>
+   </property>
    <property name="text">
     <string>About SFO</string>
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

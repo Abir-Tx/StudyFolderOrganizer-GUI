@@ -1,9 +1,12 @@
 <RCC>
-    <qresource lang="English" prefix="/about">
+    <qresource prefix="/about" lang="English">
         <file>res/about/about.txt</file>
     </qresource>
     <qresource prefix="/logo"/>
     <qresource prefix="/">
         <file>res/logo/SFO_v2.ico</file>
+        <file>res/logo/about.ico</file>
+        <file>res/logo/exit.ico</file>
+        <file>res/logo/home.ico</file>
     </qresource>
 </RCC>

@@ -72,6 +72,7 @@ void sfo::about(){
     QTextStream readAbout(&about);
     QString aboutText = readAbout.readAll();
     QMessageBox::about(this, "About SFO", aboutText);
+
 }
 
 void sfo::listLabSubNo(){

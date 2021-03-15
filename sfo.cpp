@@ -251,6 +251,13 @@ void sfo::on_next_4_clicked()
 
   // Disable the open location button
   ui->pushButton_2->setDisabled(true);
+
+  // Disbale and hide the back_5 button to disable the users to go to previous
+  // Page as the dynamic QlineEdit is currently leaking memory if called twice
+  // So untill this is fixed I am hiding the back button to prevent users from going to previous screen easily
+
+  ui->back_5->setDisabled(true);
+  ui->back_5->hide();
 }
 
 void sfo::on_back_5_clicked()

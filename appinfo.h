@@ -4,7 +4,7 @@
 #include <QApplication>
 
 const QString applicationName = "SFO";
-const QString applicationVersion = "v1.0";
+const QString applicationVersion = "v1.0.1";
 const QString applicationDisplayName = "Study Folder Organizer";
 
 unsigned short int minWidth = 650;

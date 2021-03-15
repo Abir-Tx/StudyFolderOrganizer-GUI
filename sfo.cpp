@@ -14,6 +14,7 @@
 #include "createdir.h"
 #include <QDesktopServices>
 #include <QUrl>
+#include <QProcess>
 //#include <memory>
 
 // Global Vars
@@ -247,6 +248,9 @@ void sfo::on_next_4_clicked()
   ui->back_4->hide();
   ui->next_4->hide();
   ui->stackedWidget->setCurrentIndex(5);
+
+  // Disable the open location button
+  ui->pushButton_2->setDisabled(true);
 }
 
 void sfo::on_back_5_clicked()
@@ -270,6 +274,8 @@ void sfo::on_createLabs_clicked()
   if (createdir->isdDirCreationSuccessfull()){
     ui->createLabs->setDisabled(true);
     ui->successornot->setText("Successfully created the folders");
+    // Enable the open location button
+    ui->pushButton_2->setDisabled(false);
   }
   else{
     ui->createLabs->setDisabled(false);
@@ -280,6 +286,23 @@ void sfo::on_createLabs_clicked()
 
 void sfo::on_actionFeedback_triggered()
 {
-//    QDesktopServices::openUrl(QUrl("https://github.com/Abir-Tx/StudyFolderOrganizer-GUI/issues/new/choose", QUrl::TolerantMode));
-QDesktopServices::openUrl(QUrl("mailto::abirtx@yandex.com", QUrl::TolerantMode));
+   // TODO: Uncomment the line below in v2 -> report a bug menu bar item
+  //  QDesktopServices::openUrl(QUrl("https://github.com/Abir-Tx/StudyFolderOrganizer-GUI/issues/new/choose", QUrl::TolerantMode));
+      QDesktopServices::openUrl(QUrl("mailto::abirtx@yandex.com", QUrl::TolerantMode));
+}
+
+void sfo::on_pushButton_2_clicked()
+{
+  ui->statusbar->showMessage("Openning the parent folder in Windows File Explorer", 2000);
+
+  // Openning the created folder as said in #4 issue
+
+//  QDesktopServices::openUrl(test);
+    QString createdFolderParent = selectedDrive+"University Study";
+  QProcess::startDetached("explorer.exe",{"/select,", QDir::toNativeSeparators(createdFolderParent)});
+}
+
+void sfo::on_next_5_clicked()
+{
+  QApplication::exit(0);
 }

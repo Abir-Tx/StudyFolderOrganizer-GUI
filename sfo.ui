@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="main">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -215,10 +215,10 @@
        <widget class="QLabel" name="subnamelabel">
         <property name="geometry">
          <rect>
-          <x>280</x>
+          <x>230</x>
           <y>0</y>
-          <width>100</width>
-          <height>13</height>
+          <width>181</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="text">
@@ -238,7 +238,7 @@
         <item>
          <widget class="QPushButton" name="createLabs">
           <property name="text">
-           <string>Create </string>
+           <string>Create</string>
           </property>
          </widget>
         </item>
@@ -250,9 +250,48 @@
          </widget>
         </item>
         <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Open&lt;/span&gt; the created folders &lt;span style=&quot; font-weight:600;&quot;&gt;location&lt;/span&gt; in File Explorer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>Open Location</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="minimumSize">
+           <size>
+            <width>1</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="next_5">
           <property name="text">
-           <string>Next</string>
+           <string>Exit</string>
           </property>
          </widget>
         </item>

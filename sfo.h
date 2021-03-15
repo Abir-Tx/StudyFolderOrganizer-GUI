@@ -59,6 +59,10 @@ class sfo : public QMainWindow {
 
     void on_actionFeedback_triggered();
 
+    void on_pushButton_2_clicked();
+
+    void on_next_5_clicked();
+
    private:
     Ui::sfo *ui;
 };

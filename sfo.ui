@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="main">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -211,7 +211,21 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="labfoldername"/>
+      <widget class="QWidget" name="labfoldername">
+       <widget class="QLabel" name="subnamelabel">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>0</y>
+          <width>100</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Enter Subject Names</string>
+        </property>
+       </widget>
+      </widget>
       <widget class="QWidget" name="createlabfolder">
        <layout class="QVBoxLayout" name="verticalLayout_7">
         <item>

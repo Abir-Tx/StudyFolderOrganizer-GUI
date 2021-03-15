@@ -5,5 +5,9 @@
 
 const QString applicationName = "SFO";
 const QString applicationVersion = "v1.0";
-QSize minAppSize(250, 350);
+const QString applicationDisplayName = "Study Folder Organizer";
+
+unsigned short int minWidth = 650;
+unsigned short int minHeight = 350;
+QSize minAppSize(minWidth, minHeight);
 #endif // APPINFO_H

@@ -61,9 +61,12 @@ QString Createdir::labOrtheory(bool isLabSelected, bool isTheorySelected){
   else return 0;
 }
 
+
+// Creates Subject folders based on user's given names & adds mid-term & final-term folders inside each sub folder
 void Createdir::subFolderCreator(QString *subNameHolder, int labSubNo){
   for (int i= 0; i< labSubNo; i++){
-    dir.mkdir(rootDir+subNameHolder[i]);
+    dir.mkpath(rootDir+subNameHolder[i]+"/Mid-Term/Lessons");
+    dir.mkpath(rootDir+subNameHolder[i]+"/Final-Term/Lessons");
   }
 
   // Checking if the subject folders have been created or not

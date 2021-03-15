@@ -9,5 +9,10 @@
         <file>res/logo/exit.ico</file>
         <file>res/logo/home.ico</file>
         <file>res/logo/feedback.ico</file>
+        <file>res/qss-template/SpyBot.qss</file>
+        <file>res/qss-template/Cstartpage.qss</file>
+        <file>res/qss-template/Darkeum.qss</file>
+        <file>res/qss-template/Gravira.qss</file>
+        <file>res/qss-template/Toolery.qss</file>
     </qresource>
 </RCC>

@@ -31,3 +31,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res.qrc
+
+# Setting the binary executable icon
+RC_ICONS += res/logo/SFO_v2.ico

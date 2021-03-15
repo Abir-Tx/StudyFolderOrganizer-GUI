@@ -295,7 +295,7 @@ void sfo::on_actionFeedback_triggered()
 {
    // TODO: Uncomment the line below in v2 -> report a bug menu bar item
   //  QDesktopServices::openUrl(QUrl("https://github.com/Abir-Tx/StudyFolderOrganizer-GUI/issues/new/choose", QUrl::TolerantMode));
-      QDesktopServices::openUrl(QUrl("mailto::abirtx@yandex.com", QUrl::TolerantMode));
+      QDesktopServices::openUrl(QUrl("mailto:abirtx@yandex.com", QUrl::TolerantMode));
 }
 
 void sfo::on_pushButton_2_clicked()

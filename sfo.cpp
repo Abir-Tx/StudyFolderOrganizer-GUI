@@ -107,6 +107,11 @@ void sfo::on_driveslist_currentTextChanged(const QString &selected)
 void sfo::on_next_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+
+    // Show debug & user feedback message about selected drive
+    QString selectedDriveMessage = "Selected Drive -> "+selectedDrive;
+    qDebug()<<selectedDriveMessage;
+    ui->statusbar->showMessage(selectedDriveMessage);
 }
 
 void sfo::on_pushButton_clicked()
@@ -275,5 +280,6 @@ void sfo::on_createLabs_clicked()
 
 void sfo::on_actionFeedback_triggered()
 {
-    QDesktopServices::openUrl(QUrl("https://github.com/Abir-Tx/StudyFolderOrganizer-GUI/issues/new/choose", QUrl::TolerantMode));
+//    QDesktopServices::openUrl(QUrl("https://github.com/Abir-Tx/StudyFolderOrganizer-GUI/issues/new/choose", QUrl::TolerantMode));
+QDesktopServices::openUrl(QUrl("mailto::abirtx@yandex.com", QUrl::TolerantMode));
 }

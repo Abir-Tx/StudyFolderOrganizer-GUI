@@ -30,4 +30,4 @@ Click on the short video to see the full usage demo
 [![Download StudyFolderOrganizer-GUI](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/studyfolderorganizer-gui/files/latest/download)
 
 # Installation
-Visit [this] wiki link to see installation guide for StudyFolderOrganizer
+Visit [this](https://github.com/Abir-Tx/StudyFolderOrganizer-GUI/wiki/Installation-Guide) wiki link to see installation guide for StudyFolderOrganizer

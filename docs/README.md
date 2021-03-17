@@ -16,7 +16,7 @@ GUI Version of https://github.com/Abir-Tx/StudyFolderOrganizer. Also hosted on
 # Table Of Contents
 
 - [Usage Demo](#usage-demo)
-- [Download](#Download)
+- [Download](#download)
 
 # Usage Demo
 

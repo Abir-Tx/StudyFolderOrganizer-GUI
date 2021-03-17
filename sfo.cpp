@@ -221,6 +221,11 @@ void sfo::on_back_4_clicked()
 }
 
 void sfo::createLineEdits(){
+  // qDeleteAll deletes all the previous QLineEdits from the lineEditHolder to solve memory leak
+  // u/micod helped on this fix a lot
+  qDeleteAll(lineEditHolder);
+  lineEditHolder.clear();
+
   // Showing the line edits depending on the labsubno count
   for(int i = 0; i < labSubNo; i++){
     lineEditHolder.push_back(new QLineEdit());

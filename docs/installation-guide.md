@@ -49,3 +49,6 @@ StudyFolderOrganizer includes an easy to install setup wizard for Windows. Follo
 ---
 
 ### Video Instructions
+
+[Click here to see the full installation video](https://user-images.githubusercontent.com/28858998/111517666-819bcd80-877f-11eb-91c2-4e5d22a53e37.mp4)
+

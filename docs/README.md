@@ -17,6 +17,7 @@ GUI Version of https://github.com/Abir-Tx/StudyFolderOrganizer. Also hosted on
 
 - [Usage Demo](#usage-demo)
 - [Download](#download)
+- [Installation](#installation)
 
 # Usage Demo
 
@@ -27,3 +28,6 @@ Click on the short video to see the full usage demo
 # Download
 
 [![Download StudyFolderOrganizer-GUI](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/studyfolderorganizer-gui/files/latest/download)
+
+# Installation
+Visit [this] wiki link to see installation guide for StudyFolderOrganizer

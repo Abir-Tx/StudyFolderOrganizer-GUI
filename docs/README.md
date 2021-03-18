@@ -31,3 +31,8 @@ Click on the short video to see the full usage demo
 
 # Installation
 Visit [this](https://github.com/Abir-Tx/StudyFolderOrganizer-GUI/wiki/Installation-Guide) wiki link to see installation guide for StudyFolderOrganizer
+
+# Contributing
+Any bug report, pull request or contributions are most welcome & I would love if someone gets interested in this project. As it is a beginner level project anybody can contribute easily & will be most appreciated.
+
+Read more about contributing to this project guide [here](CONTRIBUTING.md)

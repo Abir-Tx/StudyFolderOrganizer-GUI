@@ -123,7 +123,7 @@ void sfo::on_pushButton_clicked()
 void sfo::on_next_2_clicked()
 {
   if (isLabSelected) ui->labsubnolabel->setText("How many Lab Subjects have you got");
-  else if (isTheorySelected) ui->labsubnolabel->setText("How many Theory Subjects have you got");
+  if (isTheorySelected) ui->labsubnolabel->setText("How many Theory Subjects have you got");
   else ui->labsubnolabel->setText("How many Subjects have you got");
 
    ui->stackedWidget->setCurrentIndex(3);
@@ -263,6 +263,9 @@ void sfo::on_next_4_clicked()
 
   ui->back_5->setDisabled(true);
   ui->back_5->hide();
+
+
+  ui->createLabs->setDisabled(false);
 }
 
 void sfo::on_back_5_clicked()
@@ -303,6 +306,7 @@ void sfo::on_actionFeedback_triggered()
       QDesktopServices::openUrl(QUrl("mailto:abirtx@yandex.com", QUrl::TolerantMode));
 }
 
+// Open the folder button
 void sfo::on_pushButton_2_clicked()
 {
   ui->statusbar->showMessage("Openning the parent folder in Windows File Explorer", 2000);

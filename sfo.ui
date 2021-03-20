@@ -276,6 +276,16 @@
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="delete_2">
+          <property name="toolTip">
+           <string>Delete just created folders</string>
+          </property>
+          <property name="text">
+           <string>Delete</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="Line" name="line">
           <property name="minimumSize">
            <size>

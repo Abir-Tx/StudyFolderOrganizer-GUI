@@ -322,3 +322,31 @@ void sfo::on_next_5_clicked()
 {
   QApplication::exit(0);
 }
+
+void sfo::on_delete_2_clicked()
+{
+  QMessageBox::StandardButton reply = QMessageBox::question(this,"Are you sure?","Deleting the folder will also delete all of it's content. This can not be undone.",
+                                                            QMessageBox::Yes | QMessageBox::No);
+
+  if (reply == QMessageBox::Yes){
+    QDir dir;
+    dir.setCurrent(selectedDrive+"University Study");
+    if (dir.exists()) {
+      dir.removeRecursively();
+      dir.setCurrent(selectedDrive);
+      dir.rmdir(selectedDrive+"University Study");
+      qDebug()<<"Successfully deleted directory University Study";
+      QMessageBox::information(this,"Success","Folder has been deleted successfully");
+
+
+    }
+    else{
+      qDebug()<<"Directory does not exist";
+      QMessageBox::information(this,"Error","The folder was not found");
+    }
+  }
+  else
+    return;
+  // Set the create button to enabled
+  ui->create->setDisabled(false);
+}

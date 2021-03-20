@@ -63,6 +63,8 @@ class sfo : public QMainWindow {
 
     void on_next_5_clicked();
 
+    void on_delete_2_clicked();
+
    private:
     Ui::sfo *ui;
 };

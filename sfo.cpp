@@ -337,8 +337,6 @@ void sfo::on_delete_2_clicked()
       dir.rmdir(selectedDrive+"University Study");
       qDebug()<<"Successfully deleted directory University Study";
       QMessageBox::information(this,"Success","Folder has been deleted successfully");
-
-
     }
     else{
       qDebug()<<"Directory does not exist";
@@ -347,6 +345,4 @@ void sfo::on_delete_2_clicked()
   }
   else
     return;
-  // Set the create button to enabled
-  ui->create->setDisabled(false);
 }

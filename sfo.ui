@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>5</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="main">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -109,7 +109,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="year"/>
+             <widget class="QLineEdit" name="year">
+              <property name="placeholderText">
+               <string>1</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -123,7 +127,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="semester"/>
+             <widget class="QLineEdit" name="semester">
+              <property name="placeholderText">
+               <string>1</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>

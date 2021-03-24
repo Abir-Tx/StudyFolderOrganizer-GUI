@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="main">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -47,6 +47,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="exit">
+            <property name="toolTip">
+             <string/>
+            </property>
             <property name="text">
              <string>Exit</string>
             </property>
@@ -110,6 +113,9 @@
             </item>
             <item>
              <widget class="QLineEdit" name="year">
+              <property name="toolTip">
+               <string>Enter a numeric digit of the year you ie. enter 1 if you are in 1st year of the university </string>
+              </property>
               <property name="placeholderText">
                <string>1</string>
               </property>
@@ -128,6 +134,9 @@
             </item>
             <item>
              <widget class="QLineEdit" name="semester">
+              <property name="toolTip">
+               <string>Enter numeric value of your semester ie. enter 1 if you are in 1st semester </string>
+              </property>
               <property name="placeholderText">
                <string>1</string>
               </property>
@@ -166,6 +175,9 @@
         </item>
         <item>
          <widget class="QCheckBox" name="checkBox">
+          <property name="toolTip">
+           <string>Confirm these configurations</string>
+          </property>
           <property name="text">
            <string>Confirm</string>
           </property>
@@ -239,12 +251,15 @@
         <item>
          <widget class="QLabel" name="createinfo">
           <property name="text">
-           <string>CLick on Create to create the folders</string>
+           <string>Click on Create to create the folders</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="createLabs">
+          <property name="toolTip">
+           <string>Create the folders</string>
+          </property>
           <property name="text">
            <string>Create</string>
           </property>

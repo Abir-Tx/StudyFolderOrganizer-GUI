@@ -266,6 +266,7 @@ void sfo::on_next_4_clicked()
 
 
   ui->createLabs->setDisabled(false);
+  ui->delete_2->setDisabled(true);
 }
 
 void sfo::on_back_5_clicked()
@@ -291,6 +292,7 @@ void sfo::on_createLabs_clicked()
     ui->successornot->setText("Successfully created the folders");
     // Enable the open location button
     ui->pushButton_2->setDisabled(false);
+    ui->delete_2->setDisabled(false);
   }
   else{
     ui->createLabs->setDisabled(false);

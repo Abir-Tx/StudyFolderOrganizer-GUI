@@ -4,7 +4,6 @@
 #include "appinfo.h"
 #include <QFile>
 
-
 int main(int argc, char *argv[]) {
   // This function must be called before creating the QGuiApplication object
   QApplication::setDesktopSettingsAware(true);
@@ -16,11 +15,11 @@ int main(int argc, char *argv[]) {
   app.setApplicationDisplayName(applicationDisplayName);
   app.setEffectEnabled(Qt::UI_AnimateMenu, true);
 
-  //open qss file
+  // open qss file
   QFile file(":/res/qss-template/Toolery.qss");
   file.open(QFile::ReadOnly);
 
-  //setup stylesheet
+  // setup stylesheet
   app.setStyleSheet(file.readAll());
 
   sfo window;

@@ -289,6 +289,13 @@
          </spacer>
         </item>
         <item>
+         <widget class="Line" name="line_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButton_2">
           <property name="toolTip">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Open&lt;/span&gt; the created folders &lt;span style=&quot; font-weight:600;&quot;&gt;location&lt;/span&gt; in File Explorer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>

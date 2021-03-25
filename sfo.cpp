@@ -304,6 +304,9 @@ void sfo::on_delete_2_clicked() {
       qDebug() << "Successfully deleted directory University Study";
       QMessageBox::information(this, "Success",
                                "Folder has been deleted successfully");
+
+      // Disable the Open Location button upon folder deletion
+      ui->pushButton_2->setDisabled(true);
     } else {
       qDebug() << "Directory does not exist";
       QMessageBox::information(this, "Error", "The folder was not found");

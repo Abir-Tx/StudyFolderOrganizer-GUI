@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>670</width>
-    <height>348</height>
+    <width>606</width>
+    <height>343</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>5</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="main">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -33,6 +33,12 @@
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
            <widget class="QPushButton" name="create">
+            <property name="styleSheet">
+             <string notr="true">:hover{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
+            </property>
             <property name="text">
              <string>Create</string>
             </property>
@@ -40,6 +46,12 @@
           </item>
           <item>
            <widget class="QPushButton" name="about">
+            <property name="styleSheet">
+             <string notr="true">:hover{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
+            </property>
             <property name="text">
              <string>About</string>
             </property>
@@ -47,6 +59,14 @@
           </item>
           <item>
            <widget class="QPushButton" name="exit">
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">:hover{
+	background-color: red;
+}</string>
+            </property>
             <property name="text">
              <string>Exit</string>
             </property>
@@ -68,7 +88,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="driveslist"/>
+           <widget class="QComboBox" name="driveslist">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -109,7 +133,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="year"/>
+             <widget class="QLineEdit" name="year">
+              <property name="toolTip">
+               <string>Enter a numeric digit of the year you ie. enter 1 if you are in 1st year of the university </string>
+              </property>
+              <property name="placeholderText">
+               <string>1</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -123,7 +154,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="semester"/>
+             <widget class="QLineEdit" name="semester">
+              <property name="toolTip">
+               <string>Enter numeric value of your semester ie. enter 1 if you are in 1st semester </string>
+              </property>
+              <property name="placeholderText">
+               <string>1</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -137,6 +175,14 @@
               <layout class="QHBoxLayout" name="horizontalLayout_6">
                <item>
                 <widget class="QRadioButton" name="labradio">
+                 <property name="font">
+                  <font>
+                   <family>Georgia</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>Lab</string>
                  </property>
@@ -144,6 +190,14 @@
                </item>
                <item>
                 <widget class="QRadioButton" name="theoryradio">
+                 <property name="font">
+                  <font>
+                   <family>Georgia</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>Theory</string>
                  </property>
@@ -158,6 +212,20 @@
         </item>
         <item>
          <widget class="QCheckBox" name="checkBox">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Confirm these configurations</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
           <property name="text">
            <string>Confirm</string>
           </property>
@@ -191,7 +259,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="labsubno"/>
+           <widget class="QComboBox" name="labsubno">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -231,12 +303,22 @@
         <item>
          <widget class="QLabel" name="createinfo">
           <property name="text">
-           <string>CLick on Create to create the folders</string>
+           <string>Click on Create to create the folders</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="createLabs">
+          <property name="toolTip">
+           <string>Create the folders</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">:hover{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+	color: white;
+}</string>
+          </property>
           <property name="text">
            <string>Create</string>
           </property>
@@ -266,6 +348,13 @@
          </spacer>
         </item>
         <item>
+         <widget class="Line" name="line_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButton_2">
           <property name="toolTip">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Open&lt;/span&gt; the created folders &lt;span style=&quot; font-weight:600;&quot;&gt;location&lt;/span&gt; in File Explorer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -279,6 +368,12 @@
          <widget class="QPushButton" name="delete_2">
           <property name="toolTip">
            <string>Delete just created folders</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">:hover{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(170, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
           </property>
           <property name="text">
            <string>Delete</string>
@@ -300,6 +395,11 @@
         </item>
         <item>
          <widget class="QPushButton" name="next_5">
+          <property name="styleSheet">
+           <string notr="true">:hover{
+	background-color: red;
+}</string>
+          </property>
           <property name="text">
            <string>Exit</string>
           </property>
@@ -341,8 +441,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>670</width>
-     <height>20</height>
+     <width>606</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuExit">

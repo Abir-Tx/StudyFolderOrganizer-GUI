@@ -101,6 +101,13 @@ void sfo::on_next_clicked() {
   QString selectedDriveMessage = "Selected Drive -> " + selectedDrive;
   qDebug() << selectedDriveMessage;
   ui->statusbar->showMessage(selectedDriveMessage);
+
+  // Set the year and semester line edits validator to take only integeres
+  // To limit the input number range use the second constractor of the
+  // QIntValidator
+  QIntValidator *yearSemValidator = new QIntValidator(this);
+  ui->year->setValidator(yearSemValidator);
+  ui->semester->setValidator(yearSemValidator);
 }
 
 void sfo::on_pushButton_clicked() { ui->stackedWidget->setCurrentIndex(1); }
@@ -331,7 +338,8 @@ void sfo::on_delete_2_clicked() {
       // set back the value of isDirCreated to false as the folders have been
       // deleted
       isDirCreated = false;
-
+      // Enable the create folders button after a successfull deletion so users
+      // can create folders again if they wants
       ui->createLabs->setDisabled(false);
     } else {
       qDebug() << "Directory does not exist";

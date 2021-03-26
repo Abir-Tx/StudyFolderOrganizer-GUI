@@ -1,20 +1,19 @@
 #include "sfo.h"
 
-#include <QMessageBox>
-
-#include "ui_sfo.h"
-
-#include <QFile>
-#include <QPixmap>
-#include <QTextStream>
-#include <QtDebug>
-#include <QDir>
-#include <QLineEdit>
-#include <QVBoxLayout>
-#include "createdir.h"
 #include <QDesktopServices>
-#include <QUrl>
+#include <QDir>
+#include <QFile>
+#include <QLineEdit>
+#include <QMessageBox>
+#include <QPixmap>
 #include <QProcess>
+#include <QTextStream>
+#include <QUrl>
+#include <QVBoxLayout>
+#include <QtDebug>
+
+#include "createdir.h"
+#include "ui_sfo.h"
 //#include <memory>
 
 // Global Vars
@@ -27,6 +26,7 @@ int labSubNo;
 QVBoxLayout *vlayout = new QVBoxLayout;
 QVector<QLineEdit *> lineEditHolder;
 QString subNameHolder[5];
+bool isDirCreated = false;
 
 sfo::sfo(QWidget *parent) : QMainWindow(parent), ui(new Ui::sfo) {
   ui->setupUi(this);
@@ -245,6 +245,7 @@ void sfo::on_back_5_clicked() {
 }
 
 void sfo::on_createLabs_clicked() {
+  // Create the createdir class object to use it's functions
   Createdir *createdir = new Createdir;
 
   createdir->rootDirCreator(
@@ -253,6 +254,10 @@ void sfo::on_createLabs_clicked() {
 
   createdir->subFolderCreator(subNameHolder, labSubNo);
   if (createdir->isdDirCreationSuccessfull()) {
+    // Set the isDirCreated var value to true to let other funcs
+    // know that the selected folders have been created successfully
+    isDirCreated = true;
+
     ui->createLabs->setDisabled(true);
     ui->successornot->setText("Successfully created the folders");
     // Enable the open location button
@@ -286,7 +291,22 @@ void sfo::on_pushButton_2_clicked() {
       {"/select,", QDir::toNativeSeparators(createdFolderParent)});
 }
 
-void sfo::on_next_5_clicked() { QApplication::exit(0); }
+void sfo::on_next_5_clicked() {
+  if (!isDirCreated) {
+    QMessageBox::StandardButton reply = QMessageBox::warning(
+        this, "Folders Not Created Yet !",
+        "Your selected folders and structures have not been created yet. Click "
+        "on create to create the folders.\n Are you sure you want to exit the "
+        "app without creating the folders?",
+        QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes)
+      QApplication::exit(0);
+    else
+      return;
+  } else
+    QApplication::exit(0);
+}
 
 void sfo::on_delete_2_clicked() {
   QMessageBox::StandardButton reply = QMessageBox::question(
@@ -307,6 +327,12 @@ void sfo::on_delete_2_clicked() {
 
       // Disable the Open Location button upon folder deletion
       ui->pushButton_2->setDisabled(true);
+
+      // set back the value of isDirCreated to false as the folders have been
+      // deleted
+      isDirCreated = false;
+
+      ui->createLabs->setDisabled(false);
     } else {
       qDebug() << "Directory does not exist";
       QMessageBox::information(this, "Error", "The folder was not found");

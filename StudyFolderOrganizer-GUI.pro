@@ -34,3 +34,6 @@ RESOURCES += \
 
 # Setting the binary executable icon
 RC_ICONS += res/logo/SFO_v2.ico
+
+# App Version
+VERSION += 1.1.0

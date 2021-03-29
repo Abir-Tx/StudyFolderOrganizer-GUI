@@ -2,4 +2,4 @@ SFO stands for Study Folder Organizer. Developed & managed by Mushfiqur Rahman A
 
 
 Developer: Mushfiqur Rahman Abir
-Version: 1.0 (Stable)
+Version: 1.1.0 (Stable)

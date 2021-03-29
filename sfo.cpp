@@ -341,6 +341,8 @@ void sfo::on_delete_2_clicked() {
       // Enable the create folders button after a successfull deletion so users
       // can create folders again if they wants
       ui->createLabs->setDisabled(false);
+      ui->successornot->setText("Folder deleted successfully");
+      ui->delete_2->setDisabled(true);
     } else {
       qDebug() << "Directory does not exist";
       QMessageBox::information(this, "Error", "The folder was not found");

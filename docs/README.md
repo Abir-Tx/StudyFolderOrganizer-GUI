@@ -8,6 +8,7 @@
 ![Code Lines](https://img.shields.io/tokei/lines/github/abir-tx/StudyFolderOrganizer-GUI?label=total%20code%20lines&style=flat-square) ![Commit Activity](https://img.shields.io/github/commit-activity/m/abir-tx/StudyFolderOrganizer-GUI?style=flat-square) ![Commit since last release](https://img.shields.io/github/commits-since/abir-tx/StudyFolderOrganizer-GUI/latest/main?color=yellow&sort=semver&style=flat-square)
 
 ---
+A small tool for student to manager their study folder on their windows laptop/computer. The tool saves time of the students a lot.
 
 GUI Version of https://github.com/Abir-Tx/StudyFolderOrganizer. Also hosted on
 

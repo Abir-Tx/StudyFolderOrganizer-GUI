@@ -10,9 +10,10 @@
 ---
 A small tool for student to manager their study folder on their windows laptop/computer. The tool saves time of the students a lot.
 
-GUI Version of https://github.com/Abir-Tx/StudyFolderOrganizer. Also hosted on
+GUI Version of https://github.com/Abir-Tx/StudyFolderOrganizer (Depriciated) 
 
-[![Download StudyFolderOrganizer-GUI](https://sourceforge.net/sflogo.php?type=13&group_id=3343410)](https://sourceforge.net/p/studyfolderorganizer-gui/)
+-  Also available on -> [![Download StudyFolderOrganizer-GUI](https://sourceforge.net/sflogo.php?type=13&group_id=3343410)](https://sourceforge.net/p/studyfolderorganizer-gui/)
+-  Official Website -> http://studyfolderorganizer.unaux.com/
 
 # Table Of Contents
 

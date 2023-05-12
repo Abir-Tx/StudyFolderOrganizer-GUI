@@ -13,7 +13,7 @@ A small tool for student to manager their study folder on their windows laptop/c
 GUI Version of https://github.com/Abir-Tx/StudyFolderOrganizer (Depriciated) 
 
 -  Also available on -> [![Download StudyFolderOrganizer-GUI](https://sourceforge.net/sflogo.php?type=13&group_id=3343410)](https://sourceforge.net/p/studyfolderorganizer-gui/)
--  Official Website -> http://studyfolderorganizer.unaux.com/
+-  Official Website -> https://studyfolderorganizer.vercel.app
 
 # Table Of Contents
 
